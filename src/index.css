@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@font-face {
+    font-family: "Jost";
+    src: url("./assets/fonts/font.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #171717 #f1f1f1;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@layer base {
+  ::selection {
+    background-color: #000000;
+    /* Highlight background color */
+    color: #ffffff;
+    /* Selected text color */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  /* Scrollbar width */
+  height: 8px;
+  /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Track background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #171717;
+  /* Scrollbar handle color */
+  border-radius: 4px;
+  /* Rounded edges */
+}
+
+.custom-slider,
+.custom-slider * {
+    cursor: none !important;
+}
+
+
+.glow {
+  --glow-line-color: #fff;
+  --glow-line-thickness: 2px;
+  --glow-line-length: 10;
+  --glow-blur-color: #ffffffb4;
+  --glow-blur-size: 40px;
+  --animation-speed: 5000ms;
+  --container-offset: 100px;
+  position: relative;
+}
+
+.glow-container {
+  pointer-events: none;
+  position: absolute;
+  inset: calc(var(--container-offset) / -2);
+  width: calc(100% + var(--container-offset));
+  height: calc(100% + var(--container-offset));
+  opacity: 1;
+  /* Always visible */
+  z-index: 20;
+  /* Sits above background image */
+}
+
+.glow-blur,
+.glow-line {
+  width: calc(100% - var(--container-offset));
+  height: calc(100% - var(--container-offset));
+  x: calc(var(--container-offset) / 2);
+  y: calc(var(--container-offset) / 2);
+  rx: 1.5rem;
+  /* Matches your rounded-3xl (24px) */
+  fill: transparent;
+  stroke: black;
+  stroke-width: 5px;
+  stroke-dasharray: var(--glow-line-length) calc(100 - var(--glow-line-length));
+  /* Keyframe continuous loop */
+  animation: glow-dash var(--animation-speed) linear infinite;
+}
+
+.glow-line {
+  stroke: var(--glow-line-color);
+  stroke-width: var(--glow-line-thickness);
+}
+
+.glow-blur {
+  filter: blur(var(--glow-blur-size));
+  stroke: var(--glow-blur-color);
+  stroke-width: var(--glow-blur-size);
+}
+
+/* Continuous stroke loop keyframes */
+@keyframes glow-dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+
+.nav-logo {
+  /* Requires the logo base color to be pure black or white */
+  mix-blend-mode: difference;
+
+  /* Optional: filter to ensure it starts pure white if your image isn't exact */
+  filter: invert(0);
+}
+
+
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+}
