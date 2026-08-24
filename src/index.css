@@ -7,6 +7,11 @@
 }
 
 
+@theme{
+  --breakpoint-mobile: 375px;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +35,19 @@ body {
 
 html.lenis, html.lenis body {
   height: auto;
+}
+
+/* Hide scrollbar but keep scrolling functional */
+html {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and old Edge */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, new Edge */
 }
 
 .lenis.lenis-smooth {
@@ -57,24 +75,6 @@ html.lenis, html.lenis body {
   }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  /* Scrollbar width */
-  height: 8px;
-  /* Horizontal scrollbar height */
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  /* Track background color */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #171717;
-  /* Scrollbar handle color */
-  border-radius: 4px;
-  /* Rounded edges */
-}
 
 .custom-slider,
 .custom-slider * {

@@ -25,7 +25,7 @@ const NavSlider = () => {
     }, []);
 
     return (
-        <div className="relative h-40 w-full overflow-hidden rounded-xl">
+        <div className="relative h-full w-full overflow-hidden rounded-xl">
             {images.map((image, index) => (
                 <img
                     key={image}

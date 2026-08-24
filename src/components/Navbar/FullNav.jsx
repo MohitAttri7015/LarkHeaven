@@ -190,7 +190,7 @@ const FullNav = ({ isOpen, setIsOpen }) => {
         </div>
       </div>
 
-      <div className="sm:hidden block w-full" ref={navSlide}>
+      <div className="sm:hidden block w-full h-40" ref={navSlide}>
         <NavSlider />
       </div>
     </div>

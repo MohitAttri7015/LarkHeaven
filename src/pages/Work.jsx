@@ -1,10 +1,11 @@
 import PageTitle from '../utils/PageTitle'
+import ProjectsShowcase from '../components/Work/ProjectsShowcase'
 
 const Work = () => {
   return (
     <>
       <PageTitle title="Work" />
-      <h1>Work</h1>
+      <ProjectsShowcase />
     </>
   )
 }
