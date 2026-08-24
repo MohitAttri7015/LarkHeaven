@@ -1587,15 +1587,15 @@ const ByteForgerFluidHero = () => {
                     </h1>
                 </div>
 
-                <div className="w-full flex justify-between">
+                <div className="w-full flex justify-between sm:gap-0 gap-2">
                     <div className="text-xs md:text-sm font-semibold text-black pointer-events-none">
                         Creative studio in India
                     </div>
-                    <div className="flex items-center gap-3 text-xs md:text-sm font-semibold text-black pointer-events-none">
+                    <div className="flex items-center sm:gap-3 gap-0 text-xs md:text-sm font-semibold text-black pointer-events-none">
                         <span>LINKEDIN</span>
                         <span>/</span>
                         <span>INSTAGRAM</span>
-                        <span className="border border-black rounded px-1.5 py-0.5 text-[10px] md:text-xs">
+                        <span className="border border-black rounded px-1.5! py-0.5! text-[10px] md:text-xs">
                             EN
                         </span>
                     </div>

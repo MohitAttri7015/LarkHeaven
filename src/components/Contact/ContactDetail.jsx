@@ -26,7 +26,7 @@ const ContactDetail = () => {
   const socialLinks = ["Behance", "Instagram", "Telegram"];
 
   return (
-    <section className="w-full h-screen bg-black pt-15! pb-5! md:px-8! px-4! md:pt-20! md:pb-14! relative">
+    <section className="w-full sm:h-screen min-h-screen bg-black pt-15! pb-5! md:px-8! px-4! md:pt-20! md:pb-14! relative">
       {/* main content */}
       <div className="flex w-full h-full md:justify-between md:flex-row flex-col gap-30">
         {/* left: heading */}
@@ -41,7 +41,7 @@ const ContactDetail = () => {
           </div>
 
           {/* footer: social links */}
-          <div className="flex items-center gap-6 text-sm  text-white md:relative absolute bottom-2 left-5 md:mt-0! pt-5!">
+          <div className="flex items-center gap-6 text-sm  text-white md:relative absolute bottom-2 left-5">
             {socialLinks.map((link) => (
               <a
                 key={link}
@@ -76,8 +76,7 @@ const ContactDetail = () => {
             ))}
           </div>
 
-          {/* swap this src for the real studio/product photo */}
-          <div className="mt-8! w-full h-70 sm:aspect-video overflow-hidden ">
+          <div className="mt-8! sm:mb-0! mb-10!  w-full h-70 sm:aspect-video overflow-hidden ">
             {/* <img
               src="https://i.pinimg.com/1200x/87/ad/9c/87ad9cf97ca44398ea830d1996eef884.jpg"
               alt="Studio interior"
