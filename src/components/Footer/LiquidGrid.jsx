@@ -19,7 +19,7 @@ function clamp(n, min, max, fallback) {
 }
 
 const DEFAULTS = {
-    mode: "dots" ,
+    mode: "dots",
     background: "#000000",
     lineColor: "#FFFFFF4D",
     glowColor: "#FFFFFF",
@@ -58,8 +58,6 @@ function settingsFor(p) {
     };
 }
 
-
-
 function __OriginkitBase_LiquidGrid(props) {
     const canvasRef = useRef(null);
     const propsRef = useRef(props);
@@ -81,6 +79,13 @@ function __OriginkitBase_LiquidGrid(props) {
         );
         io.observe(canvas);
 
+        // Pause entirely when tab isn't visible — no point animating hidden work.
+        let isTabVisible = document.visibilityState !== "hidden";
+        function onVisibilityChange() {
+            isTabVisible = document.visibilityState !== "hidden";
+        }
+        document.addEventListener("visibilitychange", onVisibilityChange);
+
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
@@ -97,8 +102,14 @@ function __OriginkitBase_LiquidGrid(props) {
             live: false,
         };
 
+        // Cached bounding rect — only recomputed on resize/scroll, never per-frame.
+        let rect = canvas.getBoundingClientRect();
+        function updateRect() {
+            rect = canvas.getBoundingClientRect();
+        }
+
         function resize() {
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
             const W = Math.max(1, canvas.clientWidth);
             const H = Math.max(1, canvas.clientHeight);
             const pw = Math.round(W * dpr);
@@ -108,6 +119,7 @@ function __OriginkitBase_LiquidGrid(props) {
                 canvas.height = ph;
             }
             ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            updateRect();
             if (rip.W === W && rip.H === H) return;
             rip.W = W;
             rip.H = H;
@@ -125,13 +137,24 @@ function __OriginkitBase_LiquidGrid(props) {
         const ro = new ResizeObserver(() => resize());
         ro.observe(canvas);
 
-        function addDrop(
-            cx,
-            cy,
-            radius,
-            strength,
-            collide
-        ) {
+        // Scroll can move the canvas relative to the viewport without resizing it.
+        // capture: true so we catch scrolling in any ancestor container, not just window.
+        let scrollScheduled = false;
+        function onScrollOrResize() {
+            if (scrollScheduled) return;
+            scrollScheduled = true;
+            requestAnimationFrame(() => {
+                updateRect();
+                scrollScheduled = false;
+            });
+        }
+        window.addEventListener("scroll", onScrollOrResize, {
+            passive: true,
+            capture: true,
+        });
+        window.addEventListener("resize", onScrollOrResize, { passive: true });
+
+        function addDrop(cx, cy, radius, strength, collide) {
             const { W, H, rW, rH, gW, gH, cur } = rip;
             if (!W || !gW) return;
             const gx = (cx / W) * rW + PAD;
@@ -267,7 +290,6 @@ function __OriginkitBase_LiquidGrid(props) {
 
         const BUCKETS = 4;
         const GLOW_FULL = 4;
-
         const TAU = Math.PI * 2;
 
         function drawFrame(S) {
@@ -303,10 +325,7 @@ function __OriginkitBase_LiquidGrid(props) {
 
                         const k = Math.min(1, Math.abs(d) / GLOW_FULL);
                         if (k < 0.06) continue;
-                        const bi = Math.min(
-                            BUCKETS - 1,
-                            Math.floor(k * BUCKETS)
-                        );
+                        const bi = Math.min(BUCKETS - 1, Math.floor(k * BUCKETS));
                         const lit = rad * (1 + k * 0.6);
                         glow[bi].moveTo(cx + lit, cy);
                         glow[bi].arc(cx, cy, lit, 0, TAU);
@@ -397,7 +416,6 @@ function __OriginkitBase_LiquidGrid(props) {
         };
         repaintRef.current = paint;
 
-        let rect = canvas.getBoundingClientRect();
         function toLocal(clientX, clientY) {
             if (
                 clientX < rect.left ||
@@ -424,22 +442,15 @@ function __OriginkitBase_LiquidGrid(props) {
 
         let raf = 0;
         function loop() {
-            if (!isVisible) {
+            if (!isVisible || !isTabVisible) {
                 raf = requestAnimationFrame(loop);
                 return;
             }
-            rect = canvas.getBoundingClientRect();
             const S = settingsFor(propsRef.current);
             const { W, H } = rip;
             if (W > 0 && H > 0) {
                 if (queued) {
-                    addDrop(
-                        queued.x,
-                        queued.y,
-                        S.radius,
-                        S.hoverStrength,
-                        S.collide
-                    );
+                    addDrop(queued.x, queued.y, S.radius, S.hoverStrength, S.collide);
                     queued = null;
                 }
                 if (rip.live) {
@@ -454,11 +465,14 @@ function __OriginkitBase_LiquidGrid(props) {
 
         return () => {
             io.disconnect();
+            document.removeEventListener("visibilitychange", onVisibilityChange);
             cancelAnimationFrame(raf);
             repaintRef.current = null;
             ro.disconnect();
             window.removeEventListener("mousemove", onMove);
             window.removeEventListener("click", onClick);
+            window.removeEventListener("scroll", onScrollOrResize, { capture: true });
+            window.removeEventListener("resize", onScrollOrResize);
         };
     }, []);
 
@@ -483,9 +497,9 @@ function __OriginkitBase_LiquidGrid(props) {
 LiquidGrid.defaultProps = { ...DEFAULTS };
 
 const __originkitPresetProps = {
-  "intensity": 45
+    intensity: 45,
 };
 
 export default function LiquidGrid(props) {
-  return <__OriginkitBase_LiquidGrid {...(__originkitPresetProps)} {...props} />;
+    return <__OriginkitBase_LiquidGrid {...__originkitPresetProps} {...props} />;
 }

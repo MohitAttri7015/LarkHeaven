@@ -1,12 +1,12 @@
-import { useLocation } from "react-router-dom"
+// import { useLocation } from "react-router-dom"
 import MainNav from "../components/Navbar/MainNav.jsx"
 import Footer from "../components/Footer/Footer.jsx"
 
 function MainLayout({ children }) {
-    const { pathname } = useLocation()
+    // const { pathname } = useLocation()
 
-    const hideFooter =
-        pathname === "/work"
+    // const hideFooter =
+    //     pathname === "/work"
 
     return (
         <>
@@ -14,7 +14,9 @@ function MainLayout({ children }) {
 
             <main>{children}</main>
 
-            {!hideFooter && <Footer />}
+            <Footer />
+
+            {/* {!hideFooter && <Footer />} */}
         </>
     )
 }
