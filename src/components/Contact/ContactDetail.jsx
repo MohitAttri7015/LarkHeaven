@@ -7,23 +7,23 @@ const ContactDetail = () => {
   const contactGroups = [
     {
       label: "general inquiries",
-      lines: ["work@horizonstudio.work", "+7 911 296 92 17"],
+      lines: ["attrimohit6846@gmail.com", "+91 7015846134"],
     },
     {
       label: "careers",
-      lines: ["hr@horizonstudio.work"],
+      lines: ["attrimohit6846@gmail.com"],
     },
     {
       label: "collaborations",
-      lines: ["n.karpova@horizonstudio.work", "+7 931 212-16-07"],
+      lines: ["attrimohit6846@gmail.com", "+91 7015846134"],
     },
     {
       label: "address",
-      lines: ["191189, St. Petersburg,", "Moika River Embankment 67-69"],
+      lines: ["Khatkar, Haryana 131028,", "India"]
     },
   ];
 
-  const socialLinks = ["Behance", "Instagram", "Telegram"];
+  const socialLinks = ["Dribble", "Instagram", "Behance"];
 
   return (
     <section className="w-full sm:h-screen min-h-screen bg-black pt-15! pb-5! md:px-8! px-4! md:pt-20! md:pb-14! relative">

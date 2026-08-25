@@ -1595,9 +1595,7 @@ const ByteForgerFluidHero = () => {
                         <span>LINKEDIN</span>
                         <span>/</span>
                         <span>INSTAGRAM</span>
-                        <span className="border border-black rounded px-1.5! py-0.5! text-[10px] md:text-xs">
-                            EN
-                        </span>
+                        
                     </div>
                 </div>
             </div>

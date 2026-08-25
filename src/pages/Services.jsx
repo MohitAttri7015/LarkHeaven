@@ -1,10 +1,11 @@
 import PageTitle from '../utils/PageTitle'
+import ServiceHero from '../components/Service/ServiceHero'
 
 const Services = () => {
   return (
     <>
       <PageTitle title="Services" />
-      <h1>Our Services</h1>
+      <ServiceHero />
     </>
   )
 }
