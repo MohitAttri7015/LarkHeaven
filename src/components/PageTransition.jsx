@@ -1,11 +1,13 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import gsap from "gsap";
+import { useLenis } from "lenis/react";
 
 const PageTransition = ({ children }) => {
     const panelsRef = useRef([]);
     const navigate = useNavigate();
     const location = useLocation();
+    const lenis = useLenis();
 
     // Only true when WE started a navigation
     const isTransitioning = useRef(false);
@@ -56,6 +58,8 @@ const PageTransition = ({ children }) => {
                 !href ||
                 href.startsWith("#") ||
                 href.startsWith("http") ||
+                href.startsWith("mailto:") ||
+                href.startsWith("tel:") ||
                 link.target === "_blank" ||
                 event.ctrlKey ||
                 event.metaKey ||
@@ -76,6 +80,11 @@ const PageTransition = ({ children }) => {
             document.removeEventListener("click", handleClick);
         };
     }, [location.pathname]);
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+        lenis?.scrollTo(0, { immediate: true, force: true });
+    }, [location.pathname, lenis]);
 
     // Reveal new page
     useLayoutEffect(() => {

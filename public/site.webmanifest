@@ -1,0 +1,15 @@
+{
+    "name": "Lark Heaven",
+    "short_name": "Lark Heaven",
+    "start_url": "/",
+    "display": "browser",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}

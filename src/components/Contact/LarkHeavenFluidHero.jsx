@@ -1562,7 +1562,7 @@ function startFluidBackground(canvas) {
    REACT COMPONENT
 ============================================================================ */
 
-const ByteForgerFluidHero = () => {
+const LarkHeavenFluidHero = () => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -1579,11 +1579,11 @@ const ByteForgerFluidHero = () => {
                 <div></div>
 
                 <div className="w-fit flex flex-col justify-center items-start">
-                    <h2 className=" text-black uppercase leading-[0.82] tracking-tight md:text-5xl text-3xl md:ml-5! ml-2! font-bold">
-                        BYTE
+                    <h2 className=" text-black uppercase leading-[0.82] tracking-tight md:text-4xl text-3xl md:ml-5! ml-1! font-bold">
+                        LARK
                     </h2>
-                    <h1 className=" text-black uppercase leading-[0.82] tracking-tight text-[26vw] font-bold">
-                        forge
+                    <h1 className=" text-black uppercase leading-[0.82] tracking-tight text-[23vw] font-bold">
+                        HEAVEN
                     </h1>
                 </div>
 
@@ -1592,10 +1592,9 @@ const ByteForgerFluidHero = () => {
                         Creative studio in India
                     </div>
                     <div className="flex items-center sm:gap-3 gap-0 text-xs md:text-sm font-semibold text-black pointer-events-none">
-                        <span>LINKEDIN</span>
+                        <span>GITHUB</span>
                         <span>/</span>
                         <span>INSTAGRAM</span>
-                        
                     </div>
                 </div>
             </div>
@@ -1605,7 +1604,7 @@ const ByteForgerFluidHero = () => {
 
         
 
-            {/* fluid layer: real WebGL Navier-Stokes sim, dye forced to white,
+        {/* fluid layer: real WebGL Navier-Stokes sim, dye forced to white,
           transparent background, mix-blend-mode: difference so wherever the
           liquid touches the white page it inverts to black, and wherever it
           touches the black text it inverts to white. */}
@@ -1621,4 +1620,4 @@ const ByteForgerFluidHero = () => {
     );
 };
 
-export default ByteForgerFluidHero;
+export default LarkHeavenFluidHero;

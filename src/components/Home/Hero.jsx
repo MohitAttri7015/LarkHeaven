@@ -120,7 +120,7 @@ const Hero = () => {
 
                     <div className="flex lg:flex-row lg:justify-between flex-col-reverse lg:gap-0 gap-4">
                         <div className="flex lg:items-end lg:pb-5! justify-between lg:w-[25%] w-full flex-col gap-1 lg:flex-row">
-                            <h6 className="md:text-sm text-[12px] font-normal">BYTE FORGE</h6>
+                            <h6 className="md:text-sm text-[12px] font-normal">LARK HEAVEN</h6>
 
                             <h6 className="md:text-sm text-[12px] font-normal">CURRENT TIME: {time} IST</h6>
                         </div>

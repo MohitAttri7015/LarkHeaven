@@ -67,7 +67,7 @@ const PROCESS_DATA2 = [
 
 const Process = () => {
   return (
-    <section className="bg-black text-white w-full lg:pb-10!">
+    <section id="process" className="bg-black text-white w-full lg:pb-10!">
       <div className="border-t border-zinc-800">
         {PROCESS_DATA.map((item) => (
           <div

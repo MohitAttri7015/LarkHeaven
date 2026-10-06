@@ -32,7 +32,7 @@ const TechStackGallery = ({ images, interval = 2000, delay = 0, }) => {
             {images.map((image, index) => (
                 <img
                     key={image}
-                    src={image}
+                    src={`${image}?tr=w-240,q-70`}
                     alt=""
                     loading="lazy"
                     className={`absolute inset-0 h-full w-full object-cover ${index === currentIndex

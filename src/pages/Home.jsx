@@ -1,4 +1,4 @@
-import PageTitle from '../utils/PageTitle'
+import Seo from '../components/Seo'
 import Hero from '../components/Home/Hero'
 import WhatWeDo from '../components/Home/WhatWeDo'
 import SelectedWork from '../components/Home/SelectedWork'
@@ -8,7 +8,8 @@ import SAbout from '../components/Home/SAbout'
 const Home = () => {
   return (
     <>
-      <PageTitle title="Digital Experiences That Matter" />
+      <Seo path="/" />
+      <h1 className="sr-only">Lark Heaven — Web Development, UI/UX Design & Full-Stack Digital Experiences</h1>
       <Hero />
       <WhatWeDo />
       <SelectedWork />

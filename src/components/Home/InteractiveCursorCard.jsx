@@ -32,7 +32,7 @@ const InteractiveCursorCard = ({ isHovered, followerRef, horizLineRef, vertLineR
                 {/* Center Image Frame */}
                 <div className="w-56 h-36 bg-black overflow-hidden rounded ">
                     <img
-                        src={data.image}
+                        src={`${data.image}?tr=w-448,q-70`}
                         alt={data.title}
                         loading="lazy"
                         className="w-full h-full object-cover opacity-90 transition-all duration-300"

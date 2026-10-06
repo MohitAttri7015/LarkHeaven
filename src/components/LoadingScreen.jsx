@@ -222,7 +222,7 @@ function LoadingScreen({ onComplete }) {
 
                 <img
                     src="/MainLogo.png"
-                    alt="ByteForge"
+                    alt="LarkHeaven"
                     className="relative z-10 w-40 object-contain"
                 />
 

@@ -135,13 +135,13 @@ const FullNav = ({ isOpen, setIsOpen }) => {
 
       <div className="h-fit sm:h-full w-full flex flex-row items-center justify-between bg-red text-white ">
         <div className="w-fit">
-          <h1 ref={headingRef} className="md:text-7xl sm:text-5xl text-3xl font-light leading-[1.2]">
+          <p ref={headingRef} className="md:text-7xl sm:text-5xl text-3xl font-light leading-[1.2]">
             DIGITAL
             <br />
             EXPERIENCES
             <br />
             THAT MATTER
-          </h1>
+          </p>
         </div>
 
         {/* CENTER — Image Container */}

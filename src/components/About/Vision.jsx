@@ -24,7 +24,7 @@ const Vision = () => {
 
 
       <div className="md:w-[45%] md:mb-30! mb-20! pointer-events-none">
-        <h1 className="md:text-4xl text-2xl text-white md:leading-13 relative z-1"><span className="w-5 h-5 inline-block md:mb-1! md:mr-5! bg-white rounded-full"></span> BUILDING WITH PURPOSE, CREATING FOR WHAT COMES NEXT</h1>
+        <h2 className="md:text-4xl text-2xl text-white md:leading-13 relative z-1"><span className="w-5 h-5 inline-block md:mb-1! md:mr-5! bg-white rounded-full"></span> BUILDING WITH PURPOSE, CREATING FOR WHAT COMES NEXT</h2>
       </div>
 
       <div className="flex flex-col w-full gap-4 pointer-events-none">

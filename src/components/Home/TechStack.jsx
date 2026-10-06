@@ -43,7 +43,7 @@ const TechStack = () => {
 
     return (
         <div className="w-full bg-black text-white md:px-8! px-4! md:py-25! py-15!">
-            <h1 className="md:text-6xl sm:text-4xl text-2xl md:leading-20 sm:leading-15 leading-10 select-none font-light uppercase">Web Design & Development,<TechStackGallery images={images1} delay={1500} /> React / Next.js, UI / UX,<TechStackGallery images={images2} delay={500} /> Custom Software,<TechStackGallery images={images7} delay={900} /> BaaS (Supabase & Firebase),<TechStackGallery images={images3} delay={1800} /> SEO, Animation (GSAP),<TechStackGallery images={images4} delay={2000} /> 3D (Three.js),<TechStackGallery images={images5} delay={700} /> R3F, Vibe Code<TechStackGallery images={images6} delay={2500} />, MongoDB, SQL</h1>
+            <div className="md:text-6xl sm:text-4xl text-2xl md:leading-20 sm:leading-15 leading-10 select-none font-light uppercase">Web Design & Development,<TechStackGallery images={images1} delay={1500} /> React / Next.js, UI / UX,<TechStackGallery images={images2} delay={500} /> Custom Software,<TechStackGallery images={images7} delay={900} /> BaaS (Supabase & Firebase),<TechStackGallery images={images3} delay={1800} /> SEO, Animation (GSAP),<TechStackGallery images={images4} delay={2000} /> 3D (Three.js),<TechStackGallery images={images5} delay={700} /> R3F, Vibe Code<TechStackGallery images={images6} delay={2500} />, MongoDB, SQL</div>
         </div>
     )
 }

@@ -14,14 +14,14 @@ const ServiceHero = () => {
                             mode="multi"
                         />
 
-                        <h1 className="md:text-6xl mobile:text-3xl text-2xl tracking-tighter lowercase">We build digital</h1>
+                        <p className="md:text-6xl mobile:text-3xl text-2xl tracking-tighter lowercase">We build digital</p>
                     </div>
                     <h1 className="md:text-6xl mobile:text-3xl text-2xl lowercase">experiences that shape</h1>
                     <h1 className="md:text-6xl mobile:text-3xl text-2xl md:text-[#ccc] text-[#bbb] lowercase">what comes next.</h1>
                 </div>
 
                 <div className="w-full flex justify-between items-end">
-                    <p className="sm:text-lg text-[14px] md:w-[40%] sm:leading-5 leading-3.5">ByteForge is for those who believe digital experiences should do more than simply exist — they should make an impact. We combine design, technology, and creativity to build bold websites, powerful applications, and digital products that turn ideas into experiences people remember.</p>
+                    <p className="sm:text-lg text-[14px] md:w-[40%] sm:leading-5 leading-3.5">LarkHeaven is for those who believe digital experiences should do more than simply exist — they should make an impact. We combine design, technology, and creativity to build bold websites, powerful applications, and digital products that turn ideas into experiences people remember.</p>
 
                     <span className="hidden sm:block">(Scroll)</span>
                 </div>
@@ -42,7 +42,7 @@ const ServiceHero = () => {
                 <div className="w-full border-t border-[#aaaaaa5a] pt-8!">
                     <h2 className="font-light text-4xl sm:mb-15! mb-10!">Digital Services</h2>
                     <div className="w-full flex md:flex-row flex-col md:justify-between md:gap-0 gap-6">
-                        <p className='md:w-[50%] font-light sm:text-m text-sm'>ByteForge delivers high-performance web and software solutions that don't just tick boxes—they elevate your product. From scalable full-stack web applications to modern, high-converting digital platforms, we bring your vision to life with precision and clean code. Our approach goes beyond basic setup, building fast, resilient architectures designed to engage users and drive growth. For brands ready to scale, we’re here to make it happen.</p>
+                        <p className='md:w-[50%] font-light sm:text-m text-sm'>Lark Heaven delivers high-performance web and software solutions that don't just tick boxes—they elevate your product. From scalable full-stack web applications to modern, high-converting digital platforms, we bring your vision to life with precision and clean code. Our approach goes beyond basic setup, building fast, resilient architectures designed to engage users and drive growth. For brands ready to scale, we’re here to make it happen.</p>
                         <ul className='md:w-[30%] font-light md:text-sm text-[13px] flex flex-col gap-2'>
                             <li>Custom Web Development</li>
                             <li>Full-Stack Applications</li>

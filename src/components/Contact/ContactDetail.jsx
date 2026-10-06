@@ -1,5 +1,3 @@
-
-
 import NavSlider from "../Navbar/NavSlide";
 
 
@@ -7,11 +5,11 @@ const ContactDetail = () => {
   const contactGroups = [
     {
       label: "general inquiries",
-      lines: ["attrimohit6846@gmail.com", "+91 7015846134"],
+      lines: ["hello.larkheaven@gmail.com", "+91 7015846134"],
     },
     {
       label: "careers",
-      lines: ["attrimohit6846@gmail.com"],
+      lines: ["hello.larkheaven@gmail.com"],
     },
     {
       label: "collaborations",
@@ -23,7 +21,11 @@ const ContactDetail = () => {
     },
   ];
 
-  const socialLinks = ["Dribble", "Instagram", "Behance"];
+  const socialLinks = [
+    { name: "Dribbble", url: "https://dribbble.com/lark-heaven" },
+    { name: "X", url: "https://x.com/LarkHeavenX" },
+    { name: "Instagram", url: "https://www.instagram.com/larkheavenx/" },
+  ];
 
   return (
     <section className="w-full sm:h-screen min-h-screen bg-black pt-15! pb-5! md:px-8! px-4! md:pt-20! md:pb-14! relative">
@@ -32,9 +34,9 @@ const ContactDetail = () => {
         {/* left: heading */}
         <div className="flex md:flex-col  md:justify-between ">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl text-white tracking-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl text-white tracking-tight">
               Contact us
-            </h1>
+            </h2>
             <p className="md:mt-4! max-w-xs text-sm md:text-base text-neutral-500 ">
               Get in touch with us for any enquiries and questions
             </p>
@@ -44,11 +46,12 @@ const ContactDetail = () => {
           <div className="flex items-center gap-6 text-sm  text-white md:relative absolute bottom-2 left-5">
             {socialLinks.map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.name}
+                href={link.url}
+                target="_blank"
                 className="hover:text-neutral-500 transition-colors"
               >
-                {link}
+                {link.name}
               </a>
             ))}
           </div>

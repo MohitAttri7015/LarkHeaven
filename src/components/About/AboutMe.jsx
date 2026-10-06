@@ -23,10 +23,10 @@ const AboutMe = () => {
 
                 {/* Content Container */}
                 <div className="flex flex-col justify-center text-left max-w-xl">
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-medium tracking-tight leading-[0.95] mb-8!">
+                    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-medium tracking-tight leading-[0.95] mb-8!">
                         Building Digital <br />
                         Craft
-                    </h1>
+                    </h2>
 
                     <div className="space-y-4! text-base sm:text-lg text-[#111111] font-normal leading-snug">
                         <p>

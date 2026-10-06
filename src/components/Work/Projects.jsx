@@ -46,10 +46,10 @@ const Projects = () => {
       </div>
 
       <div className="relative z-1 min-h-screen flex flex-col items-center justify-center">
-        <ul className="flex flex-col items-center justify-center space-y-4 md:space-y-6 w-full max-w-4xl">
+        <div className="flex flex-col items-center justify-center space-y-4 md:space-y-6 w-full max-w-4xl">
           {projectsData.map((project) => (
-            <Link Link to='/' key={project.id}>
-              <li
+            <Link to='/' key={project.id}>
+              <div
                 onMouseEnter={() => setActiveProject(project.id)}
                 onMouseLeave={() => setActiveProject(null)}
                 className="relative cursor-pointer group flex items-start justify-center"
@@ -77,10 +77,10 @@ const Projects = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </li>
+              </div>
             </Link>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

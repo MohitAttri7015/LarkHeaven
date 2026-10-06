@@ -57,8 +57,8 @@ const WhatWeDo = () => {
             <div className="w-full md:py-25! py-15! bg-black text-white md:px-8! px-4! overflow-x-hidden flex flex-col gap-18">
                 <div className="w-full flex justify-between md:flex-row flex-col md:gap-0 gap-8">
                     <div className="flex flex-col gap-2">
-                        <h1 className="text-white font-light sm:text-6xl text-5xl">Quality Service</h1>
-                        <h1 className="text-[#999] font-light sm:text-5xl text-4xl tracking-tighter">You Can Get</h1>
+                        <h2 className="text-white font-light sm:text-6xl text-5xl">Quality Service</h2>
+                        <p className="text-[#999] font-light sm:text-5xl text-4xl tracking-tighter">You Can Get</p>
                     </div>
 
                     <p className="text-[#999] md:w-[40%] w-full sm:text-lg text-sm">
@@ -119,7 +119,7 @@ const WhatWeDo = () => {
                                     {/* Background Image (Reveals smoothly on hover) */}
                                     <div
                                         className="absolute inset-0 bg-cover bg-center opacity-100 scale-100 md:opacity-0 md:scale-105 md:group-hover:opacity-100 md:group-hover:scale-100 transition-all duration-700 ease-out"
-                                        style={{ backgroundImage: `url(${service.image})` }}
+                                        style={{ backgroundImage: `url(${service.image}?tr=w-800,q-70)` }}
                                     />
 
                                 

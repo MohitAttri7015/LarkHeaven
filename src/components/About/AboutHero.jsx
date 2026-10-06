@@ -22,8 +22,8 @@ const AboutHero = () => {
                     </h5>
 
                     <div className="flex flex-col">
-                        <h1 className="uppercase text-4xl sm:text-6xl md:text-7xl font-bold">Code</h1>
-                        <h1 className="uppercase text-4xl sm:text-6xl md:text-7xl font-bold">that drives</h1>
+                        <p className="uppercase text-4xl sm:text-6xl md:text-7xl font-bold">Code</p>
+                        <p className="uppercase text-4xl sm:text-6xl md:text-7xl font-bold">that drives</p>
 
                         <div className="relative mb-4!">
                             {/* Invisible sizer: reserves exact space for the longest word so nothing shifts */}
@@ -52,12 +52,12 @@ const AboutHero = () => {
                         </p>
 
                         <div className="flex gap-4 flex-wrap">
-                            <Link to='' className="bg-black text-white px-4! py-3! text-[14px] rounded-xl border-2 border-[#444444ac] transition-all duration-300 hover:bg-[#f3f3f3] hover:text-black text-center">
+                            <Link to='/work' className="bg-black text-white px-4! py-3! text-[14px] rounded-xl border-2 border-[#444444ac] transition-all duration-300 hover:bg-[#f3f3f3] hover:text-black text-center">
                                 VIEW WORK
                             </Link>
-                            <Link to='' className="bg-[#f3f3f3] text-black px-4! py-3! text-[14px] rounded-xl border-2 border-[#444444ac] transition-all duration-300 hover:bg-black hover:text-white text-center">
+                            <a href='#process' className="bg-[#f3f3f3] text-black px-4! py-3! text-[14px] rounded-xl border-2 border-[#444444ac] transition-all duration-300 hover:bg-black hover:text-white text-center">
                                 EXPLORE PROCESS
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
