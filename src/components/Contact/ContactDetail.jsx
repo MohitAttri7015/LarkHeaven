@@ -50,7 +50,7 @@ const ContactDetail = () => {
                 href={link.url}
                 target="_blank"
                 className="hover:text-neutral-500 transition-colors"
-              >
+              > 
                 {link.name}
               </a>
             ))}

@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom'
 import GlowingBg from './GlowingBg';
+import Project1Img from '../../assets/images/project1.jpg'
 
 const projectsData = [
   {
     id: 1,
-    title: "Italy Summer",
+    title: "Palate & Plume",
     count: "[1]",
-    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=400&q=80",
+    image: Project1Img,
+    link: "https://palate-plume.vercel.app/"
   },
   {
     id: 2,
@@ -48,7 +50,7 @@ const Projects = () => {
       <div className="relative z-1 min-h-screen flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center space-y-4 md:space-y-6 w-full max-w-4xl">
           {projectsData.map((project) => (
-            <Link to='/' key={project.id}>
+            <Link to={project.link} target="_blank" rel="noopener noreferrer" key={project.id}>
               <div
                 onMouseEnter={() => setActiveProject(project.id)}
                 onMouseLeave={() => setActiveProject(null)}
