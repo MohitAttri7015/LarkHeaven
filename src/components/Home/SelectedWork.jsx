@@ -107,7 +107,7 @@ const ProjectCard = ({ project, index }) => {
                         </p>
                     </div>
 
-                    <Link to={project.link} className="group w-fit flex items-center gap-4 pb-1! text-sm relative">
+                    <Link to={project.link} target="_blank" className="group w-fit flex items-center gap-4 pb-1! text-sm relative">
                         EXPLORE PROJECT
 
                         <ArrowRight
