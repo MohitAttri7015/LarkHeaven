@@ -12,16 +12,19 @@ const projects = [
         title: "Project One",
         description: "A digital menu and live ordering system for cafes.",
         image: Project1Img,
+        link: "https://palate-plume.vercel.app/"
     },
     {
         title: "Project Two",
         description: "A powerful web platform designed around its users.",
         image: "https://i.pinimg.com/1200x/5b/04/7e/5b047e6f9afafbe23e133b362c853503.jpg",
+        link: "/work"
     },
     {
         title: "Project Three",
         description: "A scalable digital product built to make an impact.",
         image: "https://i.pinimg.com/736x/92/f5/52/92f5527a99b89066428fbcd0be1e6366.jpg",
+        link: "/work"
     },
 ];
 
@@ -104,7 +107,7 @@ const ProjectCard = ({ project, index }) => {
                         </p>
                     </div>
 
-                    <Link to='/work' className="group w-fit flex items-center gap-4 pb-1! text-sm relative">
+                    <Link to={project.link} className="group w-fit flex items-center gap-4 pb-1! text-sm relative">
                         EXPLORE PROJECT
 
                         <ArrowRight
