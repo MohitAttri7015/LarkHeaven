@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom'
 import GlowingBg from './GlowingBg';
 import Project1Img from '../../assets/images/project1.jpg'
+import Project2Img from '../../assets/images/project2.jpg'
 
 const projectsData = [
   {
@@ -13,9 +14,10 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Market Stories",
+    title: "Furlan Mari",
     count: "[2]",
-    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=400&q=80",
+    image: Project2Img,
+    link: "https://github.com/MohitAttri7015/FurlanMarri"
   },
   {
     id: 3,

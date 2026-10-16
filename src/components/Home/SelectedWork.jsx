@@ -4,26 +4,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Project1Img from '../../assets/images/project1.jpg'
+import Project2Img from '../../assets/images/project2.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
-        title: "Project One",
+        title: "Palate & Plume",
         description: "A digital menu and live ordering system for cafes.",
         image: Project1Img,
         link: "https://palate-plume.vercel.app/"
     },
     {
-        title: "Project Two",
-        description: "A powerful web platform designed around its users.",
-        image: "https://i.pinimg.com/1200x/5b/04/7e/5b047e6f9afafbe23e133b362c853503.jpg",
-        link: "/work"
+        title: "Furlan Mari",
+        description: "A ecomerce watch website.",
+        image: Project2Img,
+        link: "https://github.com/MohitAttri7015/FurlanMarri"
     },
     {
         title: "Project Three",
         description: "A scalable digital product built to make an impact.",
-        image: "https://i.pinimg.com/736x/92/f5/52/92f5527a99b89066428fbcd0be1e6366.jpg",
+        image: "https://i.pinimg.com/1200x/5b/04/7e/5b047e6f9afafbe23e133b362c853503.jpg",
         link: "/work"
     },
 ];
