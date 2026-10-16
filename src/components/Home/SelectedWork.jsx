@@ -3,14 +3,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import Project1Img from '../../assets/images/project1.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
         title: "Project One",
-        description: "A modern digital experience built for the future.",
-        image: "https://i.pinimg.com/736x/54/45/b2/5445b2a52e9b281ff53c6b479ce36f63.jpg",
+        description: "A digital menu and live ordering system for cafes.",
+        image: Project1Img,
     },
     {
         title: "Project Two",
